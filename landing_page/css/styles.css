@@ -1,0 +1,173 @@
+
+
+*{
+    /* margen externo */
+    margin:0;
+    /* margen interno */
+    padding: 0;
+}
+
+/* Crar vaiables CSS*/
+:root{
+    --primary-color:#ffff00;
+    --secondary-color:#057aff;
+    --titulos:40px;
+    --parrafos:20px;
+
+}
+
+header{
+    width: 100%;
+    /* vh = viewport height (altura de la pantalla)*/
+    height: 100vh;
+    position: relative;
+    /* para salir de una carpeta en cuañlquier lenguaje = ../ */
+    background: url("../img/bg-header.png");
+    /* cover = que cubra todo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* display: flex; = propiedad aplicada al contenedor padre para que los elementos esten los unos al lado de los otros */
+
+header nav{
+    width: 70%;
+    background-color: transparent;
+    /* centrar el objeto */
+    margin: 0 auto;
+    display: flex;
+    /* alinear de manera horizontal */
+    justify-content: space-between ;
+    /* alinear de manera vertical */
+    align-items: center;
+    padding-top: 40px;
+}
+
+/* las clases se llaman con .
+    los id se llaman con #
+*/
+header nav .logo{
+    transition: .5s;
+}
+
+header nav .logo:hover{
+    transform: scale(0.9);
+}
+
+header nav .menu{
+    display: flex;
+
+}
+
+/* por norma tecnica deben de haber solo 3 selectores */
+nav .menu li{
+    margin: 0 20px;
+    list-style: none;
+}
+.menu li{
+    color: white;
+    font-size: var(--titulos);
+    text-decoration: none;
+    padding: 10px 15px;
+}
+.menu li a:hover{
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid#fff;
+}
+header #hero{
+    width: 50;
+    min-width: 650px;
+    height: 250px;
+    background: transparent;
+    margin: 200px auto;
+    text-align: center;
+}
+header #hero h1{
+    color: var(--primary-color);
+    font-size: var(--titulos);
+    padding-top: 25px;
+}
+header #hero{
+    color: #ffffff;
+    font-size: var(--parrafos);
+}
+header #hero button{
+    margin-top: 75px;
+    background-color: var(--primary-color);
+    padding: 15px;
+    border-radius: 5px;
+    color: #433d3d;
+    border-color: black;
+}
+#planes{
+    width: 100%;
+    text-align: center;
+    padding: 180px 0;
+    background: #fff;
+}
+#planes h2{
+    font-size: var(--titulos);
+    font-weight: 700;
+    margin-bottom: 60px auto;
+}
+#planes p{
+    font-size: var(--parrafos);
+    color: #000;
+}
+
+#planes .fila{
+    width: 70%;
+    min-width: 1000px;
+    display: flex;
+    margin: 180 auto;
+    background: red;
+    justify-content: space-around;
+}
+
+#planes .fila .col-plan{
+    position: relative;
+}
+.fila .col-plan h3{
+text-transform: uppercase;
+color: var(--primary-color);
+font-size: 26px;
+position: absolute;
+top: 100%;
+width: 100%;
+text-align: center;
+z-index: 9;
+}
+
+#destinos{
+    width: 100%;
+    position: relative;
+    text-align: center;
+    padding: 120px 0 40px;
+    background: url("../img/bg-destinos.png");
+    background-size: cover;
+    background-position: center; 
+}
+ 
+#destinos h2{
+    font-size: var(--titulos);
+    color: var(--primary-color);
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+#destinos .fila{
+    display: flex;
+    justify-content: space-between;
+    width: 64%;
+    margin: 0 auto;
+}
+
+.fila .col-destinos{
+    width: 50%;
+    text-align: center;
+}
+.fila .col-destinos h3{
+color: #fff;
+font-size: 32px;
+text-transform: uppercase;
+}
